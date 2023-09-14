@@ -1,0 +1,8 @@
+.productGrid {
+	grid-template-columns: 68% 10% 10% 8%;
+}
+@media not all and (min-width: 640px) {
+	.productGrid {
+		grid-template-columns: 56% 15% 15% 10%;
+	}
+}

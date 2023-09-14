@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Page404 from "./components/404";
+import Dashboard from "./components/Dashboard";
+import Menu from "./components/Menu";
+import { Routes, Route } from "react-router";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="w-screen flex">
+			<Menu />
+			<div className="lg:ml-[20%] lg:w-full ml-[10%] w-full max-sm:ml-0 max-sm:mt-20">
+				<Routes>
+					<Route path="/" element={<Dashboard />} />
+					<Route path="*" element={<Page404 />} />
+				</Routes>
+			</div>
+		</div>
+	);
 }
 
 export default App;
