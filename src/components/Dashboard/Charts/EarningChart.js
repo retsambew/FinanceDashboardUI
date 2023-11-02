@@ -2,7 +2,7 @@ import { Bar } from "react-chartjs-2";
 import { useEffect, useRef } from "react";
 
 const EarningChart = (props) => {
-	const windowWidth = useRef(window.innerWidth);
+	const windowWidth = useRef(window.innerWidth || 0);
 
 	useEffect(() => {
 		if (windowWidth.current < 680) {
